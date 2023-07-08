@@ -3,7 +3,7 @@ from flask import Flask,  jsonify, request
 from flask_cors import CORS
 
 
-# Configurar la conexión a la base de datos SQLite
+# Configuramos la conexión a la base de datos SQLite
 DATABASE = 'saint_burger.db'
 
 def get_db_connection():
@@ -11,7 +11,7 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-# Crear la tabla 'productos' si no existe
+# Crear la tabla 'burgers' si no existe
 def create_table():
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -125,7 +125,7 @@ class Carrito:
         for item in self.items:
             if item.codigo == codigo:
                 item.cantidad += cantidad
-                self.cursor.execute("UPDATE buergers SET cantidad = cantidad - ? WHERE codigo = ?",
+                self.cursor.execute("UPDATE burgers SET cantidad = cantidad - ? WHERE codigo = ?",
                                     (cantidad, codigo))
                 self.conexion.commit()
                 return jsonify({'message': 'Producto agregado al carrito correctamente.'}), 200
@@ -172,7 +172,7 @@ carrito = Carrito()         # Instanciamos un carrito
 inventario = Inventario()   # Instanciamos un inventario
 
 # Ruta para obtener los datos de un producto según su código
-@app.route('/productos/<int:codigo>', methods=['GET'])
+@app.route('/burgers/<int:codigo>', methods=['GET'])
 def obtener_producto(codigo):
     producto = inventario.consultar_producto(codigo)
     if producto:
@@ -185,12 +185,12 @@ def obtener_producto(codigo):
     return jsonify({'message': 'Producto no encontrado.'}), 404
 
 # Ruta para obtener la lista de productos del inventario
-@app.route('/productos', methods=['GET'])
+@app.route('/burgers', methods=['GET'])
 def obtener_productos():
     return inventario.listar_productos()
 
 # Ruta para agregar un producto al inventario
-@app.route('/productos', methods=['POST'])
+@app.route('/burgers', methods=['POST'])
 def agregar_producto():
     codigo = request.json.get('codigo')
     descripcion = request.json.get('descripcion')
@@ -199,7 +199,7 @@ def agregar_producto():
     return inventario.agregar_producto(codigo, descripcion, cantidad, precio)
 
 # Ruta para modificar un producto del inventario
-@app.route('/productos/<int:codigo>', methods=['PUT'])
+@app.route('/burgers/<int:codigo>', methods=['PUT'])
 def modificar_producto(codigo):
     nueva_descripcion = request.json.get('descripcion')
     nueva_cantidad = request.json.get('cantidad')
@@ -207,7 +207,7 @@ def modificar_producto(codigo):
     return inventario.modificar_producto(codigo, nueva_descripcion, nueva_cantidad, nuevo_precio)
 
 # Ruta para eliminar un producto del inventario
-@app.route('/productos/<int:codigo>', methods=['DELETE'])
+@app.route('/burgers/<int:codigo>', methods=['DELETE'])
 def eliminar_producto(codigo):
     return inventario.eliminar_producto(codigo)
 
@@ -235,8 +235,8 @@ def obtener_carrito():
 # Ruta para obtener la lista de productos del inventario
 @app.route('/')
 def index():
-    return 'Funciono!!!!!!'
+    return 'Aplicacion_burgers'
 
 # Finalmente, si estamos ejecutando este archivo, lanzamos app.
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5001)
