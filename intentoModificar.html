@@ -74,8 +74,10 @@
 
     <script>
 
-        const URL ="https://iv4n2000.pythonanywhere.com/"
-// Capturamos el evento de envío del formulario
+        //const URL ="https://iv4n2000.pythonanywhere.com/"
+        const URL = "https://xtsulyts.pythonanywhere.com/"
+
+        // Capturamos el evento de envío del formulario
     document.getElementById('formulario').addEventListener('submit', function (event) {
         event.preventDefault(); // Evitamos que se envíe el form por ahora
 
@@ -94,7 +96,7 @@
     };
 
     // Realizamos la solicitud PUT al servidor
-    fetch(URL + 'productos/' + codigo, {
+    fetch(URL + 'burgers/' + codigo, {
         method: 'PUT',
         headers: {
         'Content-Type': 'application/json'
