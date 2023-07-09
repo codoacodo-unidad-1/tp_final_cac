@@ -11,10 +11,10 @@
     justify-content: center;
 }
 .contenedor-centrado1 button {
-    padding: 8px;
+    padding: 6px;
     margin:4px;
     background-color: rgb(53, 55, 54);
-    font-size: 1.5em;
+    font-size: 1.0em;
     color:  darkkhaki;
     border: none;
     border-radius: 5px;
@@ -22,7 +22,7 @@
 }
 
 .contenedor-centrado button {
-    padding: 8px;
+    padding: 6px;
     margin:4px;
     background-color: rgb(53, 55, 54);
     font-size: 1.5em;
