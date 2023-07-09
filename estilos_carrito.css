@@ -21,6 +21,26 @@
     cursor: pointer;
 }
 
+.contenedor-centrado button {
+    padding: 8px;
+    margin:4px;
+    background-color: rgb(53, 55, 54);
+    font-size: 1.5em;
+    color:  darkkhaki;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.contenedor-centrado a {
+    font-size: 0.5em;
+    color:  darkkhaki;
+    font-weight: bold;
+}
+
+
+
 
 p {
     font-family: 'Times New Roman', Times, serif;
@@ -45,6 +65,9 @@ form {
     border-radius: 5px;
 }
 
+#enlace-sin-subrayado {
+    text-decoration: none;
+}
 table {
     padding-top: 80px;
     max-width: 90%;
