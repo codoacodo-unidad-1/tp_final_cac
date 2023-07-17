@@ -169,19 +169,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-/*a {
-    padding: 8px;
-    margin:4px;
-    background-color: #fdab13;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 85%;
-}*/
-
-
 
 /*ESTILOS FOOTER*/
 
@@ -301,19 +288,6 @@ button:hover {
         color: darkkhaki;
      }
     
-    .contenedor_1 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        padding-top: 125px;
-        padding-left: 0px;
-        padding-right: 0px;
-       
-    }
-    .item1 p {
-        font-size: 1.2rem;
-    }
-
     .contenedor_2 {
         display: grid;
         column-span: 2 span;
@@ -336,20 +310,7 @@ button:hover {
         height: 650px;
     }
 
-    .contenedor_3 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%; 
-        padding: 10px;
-    }
     
-    .foto_3 {
-        width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 5px;
-        object-fit: cover;
-    }  
 
     .item2 p {
         padding: 50px;
@@ -410,25 +371,7 @@ button:hover {
         padding-top: 10px;
     }
     
-    .contenedor_1 {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-        padding-top: 110px;
-       
-    }
-
-    .contenedor_1 p {
-        padding-right: 60px;
-        padding-left: 60px;
-    }
-    .item1 p {
-        font-size: 1.3rem;
-    }
-
-    .foto {
-        width: 100%;
-    }
+   
 
     .contenedor_2 {
         display: grid;
@@ -437,42 +380,10 @@ button:hover {
         padding: 0px;
     }
     
-    .contenedor_2 p {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
     .item2 {
         object-fit: cover;
         width: 100%;  
     }
-    
-    .item2 p {
-        gap: 0;
-        color: darkkhaki;
-        font-size: 1.3rem;
-    }
 
-    .contenedor_3 {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-        padding-right: 0px;
-        padding-left: 0px;
-        padding-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .contenedor_3 p {
-        padding-right: 60px;
-        padding-left: 60px;
-    }
-
-    .foto_3 {
-        width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 5px;
-        object-fit: cover;
-    }
 
 }
